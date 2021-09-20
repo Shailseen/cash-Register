@@ -10,11 +10,13 @@ console.log(noteCounting);
 var currencyAre = [2000, 500, 100, 20, 10 , 5, 1];
 calculateButton.addEventListener("click",function validateBillAndCashAmount(){
     message.style.display = "none";
-    if(billAmount.value>0){
-        if(cashGiven.value > billAmount.value){
+    // billAmount = Number(billAmount.value);
+    // cashGiven = Number(cashGiven.value);
+    if(billAmount.value > 0 && cashGiven.value > 0){
+        if((cashGiven.value) >= (billAmount.value)){
             var returnAmount = cashGiven.value - billAmount.value;
-            showMessage("Money to be returend");
-            showMessage(returnAmount);
+            showMessage("Money to be returend = " + returnAmount);
+            // showMessage(returnAmount);
             // console.log("AmountToBeReturned = "+returnAmount);
 
 
